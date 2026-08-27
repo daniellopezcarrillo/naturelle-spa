@@ -1,0 +1,125 @@
+{
+  "manifestVersion": 1,
+  "status": "generated",
+  "sourceOfTruth": "src/data/treatments.js",
+  "generationMethod": {
+    "preferred": "built-in image_gen",
+    "attempted": "Codex exec with authenticated built-in image_gen",
+    "fallback": "not used",
+    "model": "gpt-5.6-luna"
+  },
+  "outputSpec": {
+    "directory": "/images/generated/gallery/treatments/",
+    "format": "png",
+    "aspectRatio": "4:5",
+    "intendedUse": "exploratory editorial treatment media",
+    "globalConstraints": [
+      "realistic but art-directed editorial spa photography",
+      "non-identifiable person; crop the face, turn the subject away, or use a non-identifying close crop",
+      "show the treatment area, therapist hands, and only materials or tools supported by the treatment data",
+      "no text, logo, watermark, brand mark, before-and-after framing, medical imagery, or implied clinical outcome",
+      "interface text, prices, duration, and calls to action are not part of the image"
+    ]
+  },
+  "treatments": [
+    {
+      "id": "reafirma-tu-belleza",
+      "name": "Reafirma tu Belleza",
+      "imagePath": "/images/generated/gallery/treatments/reafirma-tu-belleza-radiofrecuencia.png",
+      "status": "success",
+      "prompt": "Use case: photorealistic-natural\nAsset type: vertical 4:5 exploratory editorial treatment image\nScene/backdrop: quiet contemporary spa room with neutral linen, soft side light, and restrained natural textures\nSubject: anonymous adult receiving radiofrequency antiflacidity treatment on the upper arm; only the arm and a small cropped section of the torso are visible\nAction and verified tool: therapist hands guide a generic radiofrequency applicator over the upper arm; the applicator is the only device shown\nStyle/medium: realistic art-directed editorial spa photography, tactile skin and fabric texture, no beauty retouching\nComposition/framing: intimate side crop with the arm running diagonally through the frame and generous quiet negative space above\nLighting/mood: warm daylight filtered through linen, calm and precise\nConstraints: no face identification, no text, no logo, no watermark, no before/after, no medical setting, no implied result or claim\nAvoid: extra devices, needles, gels presented as a product, body diagrams, clinical imagery",
+      "altText": "Therapist hands guide a radiofrequency applicator across the upper arm of an anonymous spa client.",
+      "reviewNotes": "Radiofrecuencia is explicitly listed in the approved technologies. Keep the tool generic and show only the documented upper-arm treatment area."
+    },
+    {
+      "id": "cintura-de-ensueno",
+      "name": "Cintura de Ensueño",
+      "imagePath": "/images/generated/gallery/treatments/cintura-de-ensueno-cavitacion-40k.png",
+      "status": "success",
+      "prompt": "Use case: photorealistic-natural\nAsset type: vertical 4:5 exploratory editorial treatment image\nScene/backdrop: modern spa treatment room, pale neutral sheet, softly shadowed wall, minimal set dressing\nSubject: anonymous adult lying on their side with the waist and abdomen visible, face fully outside the frame\nAction and verified tool: therapist hands move a generic Cavitación 40K handheld applicator across the abdomen; show one applicator only\nStyle/medium: realistic art-directed editorial spa photography with natural skin texture and restrained color\nComposition/framing: overhead three-quarter crop, abdomen placed low in frame with a broad field of linen negative space\nLighting/mood: directional afternoon light, quiet and focused\nConstraints: no face, no text, no logo, no watermark, no before/after, no medical imagery, no invented measurements or outcome\nAvoid: surgery, needles, anatomy diagrams, extra machines, dramatic transformation cues, product labels",
+      "altText": "Therapist hands use a Cavitación 40K applicator on the abdomen of an anonymous spa client.",
+      "reviewNotes": "Cavitación 40K is explicitly documented. The image must depict a spa applicator without inventing a branded machine or promising localized fat reduction."
+    },
+    {
+      "id": "curvas-definidas",
+      "name": "Curvas Definidas",
+      "imagePath": "/images/generated/gallery/treatments/curvas-definidas-vacuunterapia.png",
+      "status": "success",
+      "prompt": "Use case: photorealistic-natural\nAsset type: vertical 4:5 exploratory editorial treatment image\nScene/backdrop: contemporary spa bed with neutral linen and a softly lit plaster wall\nSubject: anonymous adult lying face down; a cropped outer thigh and hip are the focal area, with the head entirely excluded\nAction and verified tool: therapist hands guide a single generic vacuum-therapy cup along the outer thigh; show a clear or neutral-toned applicator with no markings\nStyle/medium: realistic editorial spa photography, softly imperfect skin and linen texture\nComposition/framing: low side viewpoint close to the leg, strong diagonal from therapist forearm to thigh, open negative space on one side\nLighting/mood: cool morning light balanced with warm linen, composed and contemporary\nConstraints: no face identification, no text, no logo, no watermark, no before/after, no medical imagery, no implied result\nAvoid: multiple cups, bruising, aggressive suction marks, extra equipment, clinical diagrams, product packaging",
+      "altText": "Therapist hands guide a vacuum-therapy cup along the outer thigh of an anonymous spa client.",
+      "reviewNotes": "Vacuunterapia is explicitly documented. Avoid exaggerated suction marks or claims about contouring; show one neutral generic applicator."
+    },
+    {
+      "id": "esculpe-y-reafirma",
+      "name": "Esculpe y Reafirma",
+      "imagePath": "/images/generated/gallery/treatments/esculpe-y-reafirma-protocol.png",
+      "status": "success",
+      "prompt": "Use case: photorealistic-natural\nAsset type: vertical 4:5 exploratory editorial treatment image\nScene/backdrop: quiet spa room with a broad neutral treatment sheet and a single folded towel in the background\nSubject: anonymous adult receiving a full-silhouette body treatment; frame the torso and upper legs without showing the face\nAction and verified materials/tools: therapist hands perform a general non-device protocol on the side of the torso; no specific machine or unverified product is visible\nStyle/medium: realistic art-directed editorial spa photography, refined but human, visible hands and natural skin texture\nComposition/framing: high oblique viewpoint with the body forming a sculptural curve and generous negative space at the head of the bed\nLighting/mood: soft directional light, measured and calm\nConstraints: no face identification, no text, no logo, no watermark, no before/after, no medical imagery, no invented protocol steps, no implied result\nAvoid: named devices, needles, cupping, brushes, product labels, clinical treatment rooms",
+      "altText": "Therapist hands work along the torso of an anonymous spa client during a general body treatment protocol.",
+      "reviewNotes": "The approved data names a combined reductive and reafirmante protocol but does not specify equipment or materials. Hands-only depiction avoids inventing a procedure."
+    },
+    {
+      "id": "brazos-de-seda",
+      "name": "Brazos de Seda",
+      "imagePath": "/images/generated/gallery/treatments/brazos-de-seda-reafirmante.png",
+      "status": "success",
+      "prompt": "Use case: photorealistic-natural\nAsset type: vertical 4:5 exploratory editorial treatment image\nScene/backdrop: minimal spa treatment bed, warm neutral linen, soft architectural shadow\nSubject: anonymous adult seated or reclined with one bare arm extended; face and identity outside the crop\nAction and verified materials/tools: therapist hands apply a general reaffirming arm protocol using hands only; no undocumented device or product\nStyle/medium: realistic editorial spa photography with close tactile detail and subtle film grain\nComposition/framing: extreme close-up from the side, arm and hands occupying a narrow vertical ribbon with negative space around them\nLighting/mood: late-day window light, gentle and intimate\nConstraints: no face identification, no text, no logo, no watermark, no before/after, no medical imagery, no invented tool or outcome\nAvoid: radiofrequency applicators, needles, brushes, labels, exaggerated skin effects",
+      "altText": "Therapist hands perform a reaffirming treatment on the extended arm of an anonymous spa client.",
+      "reviewNotes": "The treatment lists a reaffirming protocol but no specific technology. Use hands only rather than reusing the radiofrequency visual from Reafirma tu Belleza."
+    },
+    {
+      "id": "piernas-sin-imperfecciones",
+      "name": "Piernas Sin Imperfecciones",
+      "imagePath": "/images/generated/gallery/treatments/piernas-sin-imperfecciones-anticelulitis.png",
+      "status": "success",
+      "prompt": "Use case: photorealistic-natural\nAsset type: vertical 4:5 exploratory editorial treatment image\nScene/backdrop: contemporary spa bed with neutral linen, quiet wall texture, and no visible branding\nSubject: anonymous adult lying face down with one lower leg and thigh visible; crop above the waist and exclude the face\nAction and verified materials/tools: therapist hands perform a general anticellulite intensive protocol on the leg; hands only because no specific tool is documented\nStyle/medium: realistic art-directed editorial spa photography, honest skin texture, elegant but not glossy\nComposition/framing: long vertical crop following the leg from thigh to calf, therapist arms entering from the edge, asymmetric negative space\nLighting/mood: crisp soft daylight with a calm editorial stillness\nConstraints: no face identification, no text, no logo, no watermark, no before/after, no medical imagery, no cellulite close-up sensationalism, no implied result\nAvoid: needles, medical instruments, invented creams, bruising, anatomical illustration, extra devices",
+      "altText": "Therapist hands work along the leg of an anonymous spa client during an anticellulite treatment protocol.",
+      "reviewNotes": "The approved record supports an anticellulite protocol and legs, but no device or product. Avoid framing skin texture as a defect or implying circulation outcomes."
+    },
+    {
+      "id": "figura-en-equilibrio",
+      "name": "Figura en Equilibrio",
+      "imagePath": "/images/generated/gallery/treatments/figura-en-equilibrio-infrarrojos.png",
+      "status": "success",
+      "prompt": "Use case: photorealistic-natural\nAsset type: vertical 4:5 exploratory editorial treatment image\nScene/backdrop: softly lit spa room with the abdomen under a neutral linen drape and a warm, abstract glow in the background\nSubject: anonymous adult reclined with the abdomen visible and face completely cropped out\nAction and verified context: therapist hands rest and work gently at the abdomen during a reductive protocol with infrared technology; show no specific machine because its form is undocumented\nStyle/medium: realistic editorial spa photography, atmospheric but grounded, natural skin and textile detail\nComposition/framing: near top-down crop with the abdomen low in frame, a field of warm light and negative space above\nLighting/mood: warm infrared-inspired ambience without visible rays, calm and balanced\nConstraints: no face, no text, no logo, no watermark, no before/after, no medical imagery, no invented device, no implied metabolic or body-tone result\nAvoid: glowing equipment, sci-fi effects, heat claims, body diagrams, product packaging",
+      "altText": "Therapist hands work gently over the abdomen of an anonymous spa client in a warm infrared treatment setting.",
+      "reviewNotes": "Infrarrojos and a reductive protocol are documented, but the equipment is not described. Use ambience and hands rather than inventing a lamp, blanket, or machine."
+    },
+    {
+      "id": "renueva-tu-silueta",
+      "name": "Renueva tu Silueta",
+      "imagePath": "/images/generated/gallery/treatments/renueva-tu-silueta-infrarrojos-protocol.png",
+      "status": "success",
+      "prompt": "Use case: photorealistic-natural\nAsset type: vertical 4:5 exploratory editorial treatment image\nScene/backdrop: contemporary treatment room with neutral linens, a quiet pool of warm light, and a clean architectural edge\nSubject: anonymous adult reclined with the abdomen and side silhouette visible; face and identity fully outside the frame\nAction and verified context: therapist hands work along the side of the torso during a combined reductive-reaffirming protocol with infrared technology; no specific machine is shown\nStyle/medium: realistic art-directed editorial spa photography, tactile, restrained, and distinctly composed\nComposition/framing: side profile crop with the torso close to one edge and a large vertical band of negative space on the opposite side\nLighting/mood: layered warm and neutral light, contemplative and precise\nConstraints: no face, no text, no logo, no watermark, no before/after, no medical imagery, no invented protocol steps or equipment, no implied transformation\nAvoid: glowing infrared panels, needles, suction cups, rollers, product labels, clinical décor",
+      "altText": "Therapist hands work along the side of an anonymous client during a combined body treatment protocol.",
+      "reviewNotes": "The approved data supports a combined reductive-reaffirming protocol with infrared technology but not a specific device. Keep the visual abstract enough to avoid false equipment detail."
+    },
+    {
+      "id": "cuerpo-esculpido",
+      "name": "Cuerpo Esculpido",
+      "imagePath": "/images/generated/gallery/treatments/cuerpo-esculpido-maderoterapia.png",
+      "status": "success",
+      "prompt": "Use case: photorealistic-natural\nAsset type: vertical 4:5 exploratory editorial treatment image\nScene/backdrop: modern spa bed with warm wood detail, neutral linen, and a quiet sunlit wall\nSubject: anonymous adult lying on their back with the abdomen visible; face fully outside the frame\nAction and verified tool: therapist hands use one smooth unbranded wooden maderotherapy tool on the abdomen; the wooden material is clearly visible\nStyle/medium: realistic art-directed editorial spa photography with honest wood grain, skin texture, and linen texture\nComposition/framing: low oblique viewpoint, tool and hands crossing the abdomen on a strong diagonal, generous negative space toward the shoulders\nLighting/mood: warm natural side light, grounded and tactile\nConstraints: no face identification, no text, no logo, no watermark, no before/after, no medical imagery, no invented result\nAvoid: multiple unexplained tools, ornate branded equipment, bruising, aggressive pressure, anatomical graphics, product labels",
+      "altText": "Therapist hands use a smooth wooden maderotherapy tool across the abdomen of an anonymous spa client.",
+      "reviewNotes": "Maderoterapia (Abdomen) is explicitly documented, so a single generic wooden tool is supported. Avoid inventing a named tool shape or claiming circulation effects."
+    },
+    {
+      "id": "silueta-luminosa",
+      "name": "Silueta Luminosa",
+      "imagePath": "/images/generated/gallery/treatments/silueta-luminosa-lipolaser-vacuunterapia.png",
+      "status": "success",
+      "prompt": "Use case: photorealistic-natural\nAsset type: vertical 4:5 exploratory editorial treatment image\nScene/backdrop: softly lit contemporary spa room, neutral linen, clean background with subtle depth\nSubject: anonymous adult reclined with the abdomen and waist visible; face excluded\nAction and verified tools: therapist hands work with a generic small lipolaser applicator near the abdomen while a single neutral vacuum-therapy cup is visible at the side; keep both tools understated and unbranded\nStyle/medium: realistic editorial spa photography, controlled highlights, natural skin and textile texture\nComposition/framing: top-down editorial crop with the abdomen placed off-center, two tools creating a measured diagonal and open negative space\nLighting/mood: luminous but natural, soft daylight with a quiet amber accent\nConstraints: no face, no text, no logo, no watermark, no before/after, no medical imagery, no laser beam, no invented result or body change\nAvoid: sci-fi light effects, multiple cups, needles, surgical equipment, product packaging, visible brand marks",
+      "altText": "Therapist hands position a lipolaser applicator and vacuum-therapy cup near the abdomen of an anonymous spa client.",
+      "reviewNotes": "Both Lipoláser and Vacuunterapia are explicitly documented. Do not render a laser beam or imply a visible result; tools should remain generic and non-branded."
+    },
+    {
+      "id": "juventud-radiante",
+      "name": "Juventud Radiante",
+      "imagePath": "/images/generated/gallery/treatments/juventud-radiante-radiofrecuencia-martillo-frio.png",
+      "status": "success",
+      "prompt": "Use case: photorealistic-natural\nAsset type: vertical 4:5 exploratory editorial treatment image\nScene/backdrop: contemporary facial treatment room with pale linen, soft green-gray wall, and controlled natural light\nSubject: anonymous adult reclined with only the cheek, jawline, and closed eye area partially visible; crop to prevent identification\nAction and verified tools: therapist hands use a generic radiofrequency facial applicator on one side of the face while a small generic cold hammer tool rests in the other hand near the cheek; both tools are unbranded\nStyle/medium: realistic art-directed editorial spa photography, visible pores and natural skin texture, no retouching\nComposition/framing: close three-quarter facial crop with hands entering from opposite edges, asymmetrical negative space near the forehead\nLighting/mood: cool diffused daylight balanced by a soft warm skin tone, calm and exact\nConstraints: no identifiable face, no text, no logo, no watermark, no before/after, no medical imagery, no invented outcome or product claim\nAvoid: injections, needles, aggressive medical devices, product jars, laser beams, beauty-ad retouching, visible brand marks",
+      "altText": "Therapist hands use a radiofrequency facial applicator and cold hammer near the cheek of an anonymous spa client.",
+      "reviewNotes": "Radiofrecuencia facial and Martillo frío are explicitly documented. Preserve anonymity and show both tools generically without asserting rejuvenation, wrinkle reduction, or other outcomes."
+    }
+  ]
+}

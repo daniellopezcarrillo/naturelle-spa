@@ -1,0 +1,33 @@
+:root {
+  --color-brand: #a3a17c;
+  --color-brand-strong: #5e6248;
+  --color-brand-dark: #343a2b;
+  --color-bg: #f7f5ef;
+  --color-bg-alt: #e3ddcf;
+  --color-surface: #fff;
+  --color-text: #282a24;
+  --color-text-muted: #61645b;
+  --color-sage: #c5c8ae;
+  --color-border: rgba(94, 98, 72, 0.22);
+  --font-heading: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Manrope", Arial, sans-serif;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+  --space-6: 4.5rem;
+  --space-7: 7rem;
+  --container-copy: 42rem;
+  --container-content: 72rem;
+  --container-wide: 80rem;
+  --gutter: clamp(1rem, 4vw, 3rem);
+  --section-space: clamp(4.5rem, 10vw, 9rem);
+  --radius-sm: 0;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.5rem;
+  --motion-fast: 180ms;
+  --motion-normal: 320ms;
+  --motion-slow: 650ms;
+  --ease-naturelle: cubic-bezier(0.22, 1, 0.36, 1);
+}
