@@ -10,7 +10,7 @@ export function initHeaderCompaction(header, marker, Observer) {
   }
 }
 
-export function initNavigation() {
+export function initNavigation({ onOpen, onClose } = {}) {
   const dialog = document.querySelector("[data-mobile-dialog]");
   const openButton = document.querySelector("[data-menu-open]");
   const closeButton = document.querySelector("[data-menu-close]");
@@ -19,11 +19,13 @@ export function initNavigation() {
   const close = () => {
     dialog.close();
     document.body.classList.remove("menu-open");
-    openButton.focus();
+    onClose?.();
+    openButton.focus({ preventScroll: true });
   };
   openButton.addEventListener("click", () => {
     dialog.showModal();
     document.body.classList.add("menu-open");
+    onOpen?.();
     closeButton.focus();
   });
   closeButton.addEventListener("click", close);

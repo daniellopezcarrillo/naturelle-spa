@@ -1,30 +1,46 @@
+import { LAYOUT_EVENT } from "./goal-selector.js";
+import { scrollToTarget } from "./scroll.js";
+
+// The ledger row unfolds its own detail in place; one row is open at a time.
 export function initTreatmentDetails() {
   const container = document.querySelector("[data-treatment-details]");
-  const details = [...document.querySelectorAll("[data-treatment-detail]")];
+  const rows = [...document.querySelectorAll(".ledger-row")];
   const links = [...document.querySelectorAll("[data-view-treatment]")];
-  if (!(container instanceof HTMLElement) || details.length === 0) return;
+  if (!(container instanceof HTMLElement) || rows.length === 0) return;
 
-  const activate = (slug, { moveFocus = false } = {}) => {
-    const target = details.find((detail) => detail.dataset.treatmentDetail === slug);
-    if (!(target instanceof HTMLElement)) return;
+  const parts = (row) => ({
+    button: row.querySelector(".ledger-row__toggle"),
+    detail: row.querySelector(".ledger-row__detail"),
+  });
 
-    details.forEach((detail) => {
-      const active = detail === target;
-      detail.hidden = !active;
-      detail.toggleAttribute("data-active", active);
+  const setOpen = (row, open) => {
+    const { button, detail } = parts(row);
+    if (!button || !detail) return;
+    if (open === !detail.hidden) return;
+    detail.hidden = !open;
+    button.setAttribute("aria-expanded", String(open));
+    row.classList.toggle("is-open", open);
+    document.dispatchEvent(new CustomEvent(LAYOUT_EVENT, { detail: { type: "detail", element: detail, open } }));
+  };
+
+  rows.forEach((row) => {
+    const { button, detail } = parts(row);
+    if (detail) detail.hidden = true;
+    button?.addEventListener("click", () => {
+      const willOpen = detail.hidden;
+      rows.forEach((other) => { if (other !== row) setOpen(other, false); });
+      setOpen(row, willOpen);
     });
-    links.forEach((link) => {
-      link.toggleAttribute("aria-current", link.dataset.viewTreatment === slug);
-    });
+  });
 
-    if (moveFocus) {
-      const heading = target.querySelector("h3");
-      target.scrollIntoView({
-        behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
-        block: "start",
-      });
-      if (heading instanceof HTMLElement) heading.focus({ preventScroll: true });
-    }
+  const view = (slug, { moveFocus = true } = {}) => {
+    const row = rows.find((item) => item.dataset.treatmentSlug === slug);
+    if (!row) return;
+    if (row.hidden) document.querySelector("[data-filter-reset]")?.click();
+    rows.forEach((other) => { if (other !== row) setOpen(other, false); });
+    setOpen(row, true);
+    scrollToTarget(row);
+    if (moveFocus) parts(row).button?.focus({ preventScroll: true });
   };
 
   links.forEach((link) => {
@@ -33,18 +49,17 @@ export function initTreatmentDetails() {
       if (!slug) return;
       event.preventDefault();
       history.pushState(null, "", `#detalle-${slug}`);
-      activate(slug, { moveFocus: true });
+      view(slug);
     });
   });
 
   window.addEventListener("hashchange", () => {
-    const slug = location.hash.startsWith("#detalle-") ? location.hash.slice(9) : "";
-    if (slug) activate(slug, { moveFocus: true });
+    if (location.hash.startsWith("#detalle-")) view(location.hash.slice(9));
   });
 
-  const initialSlug = location.hash.startsWith("#detalle-")
-    ? location.hash.slice(9)
-    : details[0].dataset.treatmentDetail;
-  activate(initialSlug);
+  if (location.hash.startsWith("#detalle-")) {
+    const slug = location.hash.slice(9);
+    window.addEventListener("load", () => view(slug, { moveFocus: false }), { once: true });
+  }
   container.dataset.enhanced = "true";
 }

@@ -1,0 +1,116 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "preview/directions/sombras.html"
+        ],
+        "createdAt": "2026-11-17T20:02:43.357Z",
+        "reason": "Remaining hit is the h1 <em> at ~5rem display size; 4.1:1 passes the 3:1 large-text threshold (Claude triage)"
+      },
+      {
+        "rule": "italic-serif-display",
+        "value": "*",
+        "files": [
+          "preview/directions/sombras.html"
+        ],
+        "createdAt": "2026-11-17T20:06:11.561Z",
+        "reason": "Brand-pinned: incumbent hero uses Cormorant with italic second line; user asked to keep the same colors and elements"
+      },
+      {
+        "rule": "italic-serif-display",
+        "value": "*",
+        "files": [
+          "preview/directions/lino.html"
+        ],
+        "createdAt": "2026-11-17T20:06:11.809Z",
+        "reason": "Brand-pinned: incumbent hero uses Cormorant with italic second line; user asked to keep the same colors and elements"
+      },
+      {
+        "rule": "italic-serif-display",
+        "value": "*",
+        "files": [
+          "preview/directions/vitrina.html"
+        ],
+        "createdAt": "2026-11-17T20:06:12.059Z",
+        "reason": "Brand-pinned: incumbent hero uses Cormorant with italic second line; user asked to keep the same colors and elements"
+      },
+      {
+        "rule": "italic-serif-display",
+        "value": "*",
+        "files": [
+          "preview/directions/pliegue.html"
+        ],
+        "createdAt": "2026-11-17T20:06:12.317Z",
+        "reason": "Brand-pinned: incumbent hero uses Cormorant with italic second line; user asked to keep the same colors and elements"
+      },
+      {
+        "rule": "italic-serif-display",
+        "value": "*",
+        "files": [
+          "preview/directions/estandar.html"
+        ],
+        "createdAt": "2026-11-17T20:06:12.697Z",
+        "reason": "Brand-pinned: incumbent hero uses Cormorant with italic second line; user asked to keep the same colors and elements"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "preview/directions/pliegue.html"
+        ],
+        "createdAt": "2026-11-17T20:06:13.116Z",
+        "reason": "Brand-pinned: ivory #F7F5EF is the confirmed Naturelle palette (PRODUCT.md Brand Commitments; user asked to keep same colors)"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "preview/directions/estandar.html"
+        ],
+        "createdAt": "2026-11-17T20:06:13.497Z",
+        "reason": "Brand-pinned: ivory #F7F5EF is the confirmed Naturelle palette (PRODUCT.md Brand Commitments; user asked to keep same colors)"
+      },
+      {
+        "rule": "italic-serif-display",
+        "value": "*",
+        "files": [
+          "preview/lino-carrusel.html"
+        ],
+        "createdAt": "2026-11-17T20:11:19.596Z",
+        "reason": "Brand-pinned: incumbent hero uses Cormorant with italic emphasis; user asked to keep same elements"
+      },
+      {
+        "rule": "nested-cards",
+        "value": "*",
+        "files": [
+          "preview/lino-carrusel.html"
+        ],
+        "createdAt": "2026-11-17T20:11:19.858Z",
+        "reason": "Preview harness: each carousel frame wraps a mock screen; nesting is the device frame, not page structure (Claude triage)"
+      },
+      {
+        "rule": "repeating-stripes-gradient",
+        "value": "*",
+        "files": [
+          "preview/lino-carrusel.html"
+        ],
+        "createdAt": "2026-11-17T20:11:26.404Z",
+        "reason": "The fine repeating weave is the chosen world's linen material (direction contract OWN-WORLD), not decorative stripes"
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "src/index.template.html"
+        ],
+        "createdAt": "2026-11-17T22:17:58.417Z",
+        "reason": "False positive: template scanned without its CSS; rendered captures show ~70-76px Cormorant headings vs 16-18px body (Claude triage)"
+      }
+    ]
+  }
+}

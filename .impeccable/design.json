@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-17T00:00:00Z",
+  "title": "Design System: Naturelle Spa",
+  "extensions": {
+    "colorMeta": {
+      "olive-table": { "role": "primary", "displayName": "Olive Table", "canonical": "#5e6248", "tonalRamp": ["#1f2118", "#2d3024", "#3d4130", "#4e523c", "#5e6248", "#80846a", "#a9ac94", "#d6d8c8"] },
+      "olive-dark": { "role": "primary", "displayName": "Dark Olive Dye", "canonical": "#343a2b", "tonalRamp": ["#161a11", "#22271b", "#2c3224", "#343a2b", "#4d5541", "#6f7862", "#9ea690", "#d3d8c8"] },
+      "olive": { "role": "secondary", "displayName": "Olive", "canonical": "#a3a17c", "tonalRamp": ["#3a3926", "#55543a", "#717050", "#8b8966", "#a3a17c", "#bbb99a", "#d3d2bd", "#ebeadf"] },
+      "sage": { "role": "secondary", "displayName": "Sage", "canonical": "#c5c8ae", "tonalRamp": ["#3c3f2e", "#585c45", "#767a5f", "#94987b", "#adb195", "#c5c8ae", "#dcdecd", "#f0f1e8"] },
+      "linen": { "role": "neutral", "displayName": "Linen", "canonical": "#f7f5ef", "tonalRamp": ["#3b3a35", "#5a5850", "#7c7a70", "#a09d92", "#c3c0b5", "#e0ddd3", "#efece5", "#f7f5ef"] },
+      "linen-verso": { "role": "neutral", "displayName": "Linen Verso", "canonical": "#efeadf", "tonalRamp": ["#3a372f", "#58544a", "#797467", "#9c9686", "#bdb7a7", "#dbd5c7", "#efeadf", "#f8f6f0"] },
+      "sand": { "role": "neutral", "displayName": "Sand", "canonical": "#e3ddcf", "tonalRamp": ["#36322a", "#524d42", "#716b5d", "#928b7b", "#b3ac9b", "#e3ddcf", "#eeeae0", "#f8f6f1"] },
+      "charcoal": { "role": "neutral", "displayName": "Charcoal", "canonical": "#282a24", "tonalRamp": ["#141511", "#1e201b", "#282a24", "#3c3f37", "#55584e", "#7a7d72", "#a8aaa0", "#d7d8d1"] },
+      "charcoal-muted": { "role": "neutral", "displayName": "Charcoal Muted", "canonical": "#55584e", "tonalRamp": ["#1f201c", "#2f312b", "#41443b", "#55584e", "#6e7167", "#8d9086", "#b2b4ab", "#dadbd5"] },
+      "on-table": { "role": "neutral", "displayName": "On-Table Ivory", "canonical": "#ecebdf", "tonalRamp": ["#3a3a33", "#57574d", "#77776b", "#99988b", "#b9b8ab", "#d5d4c7", "#ecebdf", "#f7f7f0"] },
+      "field-paper": { "role": "neutral", "displayName": "Field Paper", "canonical": "#fbfaf6", "tonalRamp": ["#3d3c38", "#5c5b55", "#7e7d76", "#a2a19a", "#c4c3bc", "#e2e1db", "#f2f1ec", "#fbfaf6"] },
+      "field-stroke": { "role": "neutral", "displayName": "Field Stroke", "canonical": "#6b6f55", "tonalRamp": ["#22241a", "#33362a", "#474a3a", "#5a5e48", "#6b6f55", "#8d9177", "#b4b7a2", "#dcdecf"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero H1 only; second sentence in italic olive-table." },
+      "headline": { "displayName": "Headline", "purpose": "One per section; may carry an italic emphasis phrase." },
+      "title": { "displayName": "Title", "purpose": "Philosophy axes, contact, protocol pleat titles." },
+      "item-name": { "displayName": "Item name", "purpose": "Treatment names, technology label names, FAQ questions, tag names." },
+      "body": { "displayName": "Body", "purpose": "All running text, max 68ch." },
+      "lede": { "displayName": "Lede", "purpose": "The single muted paragraph under a section headline, max 42ch." },
+      "data": { "displayName": "Data", "purpose": "Prices, durations and packages, tabular numerals." },
+      "label": { "displayName": "Label", "purpose": "Uppercase ledger column heads and in-detail subheads only; never above a headline." }
+    },
+    "shadows": [
+      { "name": "fold-shadow", "value": "0 2.5rem 3.75rem -2.5rem rgba(20, 22, 16, 0.65)", "purpose": "Linen panels, napkin face, FAQ strip: shadow below a hanging edge." },
+      { "name": "hanging-tag", "value": "0 1.5rem 1.9rem -1.4rem rgba(20, 22, 16, 0.6)", "purpose": "Goal tags; tighter variants on wordmark, footer tag, roll items." },
+      { "name": "header-compact", "value": "0 1rem 1.5rem -1.25rem rgba(20, 22, 16, 0.75)", "purpose": "Header after scrolling past the hero." },
+      { "name": "inner-fold", "value": "inset 0 0.9rem 1rem -0.9rem rgba(40, 42, 36, 0.3)", "purpose": "Opened ledger detail tucked under its row." },
+      { "name": "verso-shading", "value": "linear-gradient(rgba(40, 42, 36, 0.24), transparent 70%)", "purpose": "Overlay on reverse faces of a fold." }
+    ],
+    "motion": [
+      { "name": "ease-naturelle", "value": "cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Every eased transition and GSAP reveal." },
+      { "name": "motion-fast", "value": "180ms", "purpose": "Small state changes." },
+      { "name": "motion-normal", "value": "320ms", "purpose": "Standard state changes." },
+      { "name": "dye-fill", "value": "clip-path circle 0 -> 145% at pointer, 0.75s ease-naturelle", "purpose": "Hover/focus fill on pills, round buttons, tags, ledger rows." },
+      { "name": "fold-reveal", "value": "rotationX -50..-90deg + opacity 0 -> rest, 1-1.7s ease-naturelle, once", "purpose": "Panels enter by swinging from their top hinge." },
+      { "name": "fold-scrub", "value": "ScrollTrigger scrub: true, rotation to 0", "purpose": "Hinged reverses open in step with scroll." },
+      { "name": "lenis", "value": "lerp 0.1; anchor scroll 1.4s", "purpose": "Smooth inertial scroll." },
+      { "name": "roll-snap", "value": "0.9s power3.out", "purpose": "Roll cylinder snaps to nearest image after arrows/drag." }
+    ],
+    "breakpoints": [
+      { "name": "header-cta", "value": "34rem" },
+      { "name": "sm", "value": "40rem" },
+      { "name": "md", "value": "48rem" },
+      { "name": "nav", "value": "60rem" },
+      { "name": "lg", "value": "64rem" },
+      { "name": "xl", "value": "72rem" }
+    ],
+    "textures": [
+      { "name": "weave", "value": "repeating-linear-gradient(0deg, rgba(94, 98, 72, 0.07) 0 1px, transparent 1px 3px), repeating-linear-gradient(90deg, rgba(94, 98, 72, 0.06) 0 1px, transparent 1px 4px)", "purpose": "Background-image on every linen surface and on the footer and mobile menu grounds." },
+      { "name": "stitch", "value": "1-1.5px dashed rgba(94, 98, 72, 0.3-0.6)", "purpose": "Row dividers, fold feet, inner borders, nav underline." }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Dark olive pill that floods with sage dye on hover/focus. The main WhatsApp action.",
+      "html": "<a class=\"ds-btn\" href=\"#\">Pedir cita por WhatsApp<span class=\"ds-btn__fill\" aria-hidden=\"true\"></span></a>",
+      "css": ".ds-btn { --bg: #343a2b; --fg: #f7f5ef; --dye: #c5c8ae; --fg-on: #343a2b; --line: #343a2b; position: relative; isolation: isolate; overflow: hidden; display: inline-flex; align-items: center; justify-content: center; min-height: 3rem; padding: 0.75rem 1.6rem; border: 1px solid var(--line); border-radius: 999px; background: var(--bg); color: var(--fg); font-family: Manrope, Arial, sans-serif; font-size: 0.95rem; font-weight: 600; line-height: 1.1; text-decoration: none; cursor: pointer; transition: color 0.5s cubic-bezier(0.22, 1, 0.36, 1), transform 0.2s cubic-bezier(0.22, 1, 0.36, 1); } .ds-btn__fill { position: absolute; inset: -1px; z-index: -1; background: var(--dye); clip-path: circle(0 at 50% 100%); transition: clip-path 0.75s cubic-bezier(0.22, 1, 0.36, 1); pointer-events: none; } .ds-btn:hover, .ds-btn:focus-visible { color: var(--fg-on); } .ds-btn:hover .ds-btn__fill, .ds-btn:focus-visible .ds-btn__fill { clip-path: circle(145% at 50% 100%); } .ds-btn:focus-visible { outline: 2px solid #343a2b; outline-offset: 4px; } .ds-btn:active { transform: scale(0.97); }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Transparent pill with dark olive line on linen; floods dark olive.",
+      "html": "<a class=\"ds-btn-ghost\" href=\"#\">Explorar tratamientos<span class=\"ds-btn-ghost__fill\" aria-hidden=\"true\"></span></a>",
+      "css": ".ds-btn-ghost { position: relative; isolation: isolate; overflow: hidden; display: inline-flex; align-items: center; min-height: 3rem; padding: 0.75rem 1.6rem; border: 1px solid #343a2b; border-radius: 999px; background: transparent; color: #343a2b; font-family: Manrope, Arial, sans-serif; font-size: 0.95rem; font-weight: 600; text-decoration: none; transition: color 0.5s cubic-bezier(0.22, 1, 0.36, 1); } .ds-btn-ghost__fill { position: absolute; inset: -1px; z-index: -1; background: #343a2b; clip-path: circle(0 at 50% 100%); transition: clip-path 0.75s cubic-bezier(0.22, 1, 0.36, 1); } .ds-btn-ghost:hover, .ds-btn-ghost:focus-visible { color: #f7f5ef; } .ds-btn-ghost:hover .ds-btn-ghost__fill, .ds-btn-ghost:focus-visible .ds-btn-ghost__fill { clip-path: circle(145% at 50% 100%); } .ds-btn-ghost:focus-visible { outline: 2px solid #343a2b; outline-offset: 4px; }"
+    },
+    {
+      "name": "Round Button",
+      "kind": "button",
+      "refersTo": "button-round",
+      "description": "3rem circular ghost-light button with a line arrow; roll controls on the olive table.",
+      "html": "<div style=\"background:#5e6248;padding:1rem;display:inline-block\"><button class=\"ds-btn-round\" aria-label=\"Siguiente\"><svg viewBox=\"0 0 24 24\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg><span class=\"ds-btn-round__fill\" aria-hidden=\"true\"></span></button></div>",
+      "css": ".ds-btn-round { position: relative; isolation: isolate; overflow: hidden; display: inline-grid; place-items: center; width: 3rem; height: 3rem; padding: 0; border: 1px solid rgba(247, 245, 239, 0.7); border-radius: 50%; background: transparent; color: #f7f5ef; cursor: pointer; transition: color 0.5s cubic-bezier(0.22, 1, 0.36, 1); } .ds-btn-round svg { width: 1.3rem; height: 1.3rem; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; } .ds-btn-round__fill { position: absolute; inset: -1px; z-index: -1; background: #f7f5ef; clip-path: circle(0 at 50% 100%); transition: clip-path 0.75s cubic-bezier(0.22, 1, 0.36, 1); } .ds-btn-round:hover, .ds-btn-round:focus-visible { color: #343a2b; } .ds-btn-round:hover .ds-btn-round__fill, .ds-btn-round:focus-visible .ds-btn-round__fill { clip-path: circle(145% at 50% 100%); } .ds-btn-round:focus-visible { outline: 2px solid #f7f5ef; outline-offset: 4px; }"
+    },
+    {
+      "name": "Goal Tag",
+      "kind": "chip",
+      "refersTo": "goal-tag",
+      "description": "Hanging fabric label used as a filter; pressed state floods dark olive.",
+      "html": "<button class=\"ds-tag\" aria-pressed=\"false\"><b>Reafirmar</b><span>4 tratamientos</span><i class=\"ds-tag__fill\" aria-hidden=\"true\"></i></button>",
+      "css": ".ds-tag { position: relative; isolation: isolate; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; gap: 0.2rem; width: 11rem; min-height: 9.5rem; padding: 1.1rem 1.1rem 1rem; border: 0; border-radius: 0 0 6px 6px; background-color: #efeadf; background-image: repeating-linear-gradient(0deg, rgba(94, 98, 72, 0.07) 0 1px, transparent 1px 3px), repeating-linear-gradient(90deg, rgba(94, 98, 72, 0.06) 0 1px, transparent 1px 4px); color: #282a24; text-align: left; box-shadow: 0 1.5rem 1.9rem -1.4rem rgba(20, 22, 16, 0.6); cursor: pointer; transition: color 0.5s cubic-bezier(0.22, 1, 0.36, 1); } .ds-tag::before { content: \"\"; position: absolute; top: 0.75rem; left: 50%; width: 0.75rem; height: 0.75rem; border-radius: 50%; border: 1.5px solid #5e6248; transform: translateX(-50%); z-index: 1; } .ds-tag b { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.6rem; font-weight: 500; line-height: 1; } .ds-tag span { font-family: Manrope, Arial, sans-serif; font-size: 0.9rem; color: #55584e; } .ds-tag__fill { position: absolute; inset: -1px; z-index: -1; background: #343a2b; clip-path: circle(0 at 50% 100%); transition: clip-path 0.75s cubic-bezier(0.22, 1, 0.36, 1); } .ds-tag:hover, .ds-tag:focus-visible, .ds-tag[aria-pressed=\"true\"] { color: #f7f5ef; } .ds-tag:hover span, .ds-tag:focus-visible span, .ds-tag[aria-pressed=\"true\"] span { color: #c5c8ae; } .ds-tag:hover .ds-tag__fill, .ds-tag:focus-visible .ds-tag__fill, .ds-tag[aria-pressed=\"true\"] .ds-tag__fill { clip-path: circle(145% at 50% 100%); } .ds-tag:focus-visible { outline: 2px solid #343a2b; outline-offset: 3px; }"
+    },
+    {
+      "name": "Linen Panel",
+      "kind": "card",
+      "refersTo": "linen-panel",
+      "description": "A fold of linen on the olive table: weave texture, 4px corners, shadow only below the hanging edge, dashed stitch foot.",
+      "html": "<div style=\"background:#5e6248;padding:2rem 2rem 4rem\"><div class=\"ds-linen\"><h2>Once protocolos, <em>una lectura clara.</em></h2><p>Técnica, duración y precio legibles sin interacción.</p><span class=\"ds-linen__stitch\"></span></div></div>",
+      "css": ".ds-linen { position: relative; padding: 2.5rem 3.5rem 3rem; background-color: #f7f5ef; background-image: repeating-linear-gradient(0deg, rgba(94, 98, 72, 0.07) 0 1px, transparent 1px 3px), repeating-linear-gradient(90deg, rgba(94, 98, 72, 0.06) 0 1px, transparent 1px 4px); color: #282a24; border-radius: 4px; box-shadow: 0 2.5rem 3.75rem -2.5rem rgba(20, 22, 16, 0.65); } .ds-linen h2 { margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 2.6rem; line-height: 1; letter-spacing: -0.02em; color: #343a2b; } .ds-linen h2 em { font-weight: 400; color: #5e6248; } .ds-linen p { margin: 1rem 0 0; font-family: Manrope, Arial, sans-serif; font-size: 1.0625rem; line-height: 1.6; color: #55584e; max-width: 42ch; } .ds-linen__stitch { position: absolute; left: 2.5rem; right: 2.5rem; bottom: 1.1rem; border-bottom: 1.5px dashed rgba(94, 98, 72, 0.4); }"
+    },
+    {
+      "name": "Ledger Row",
+      "kind": "custom",
+      "description": "Treatment register row: thumbnail, serif name, tabular data, plus mark; floods translucent sage on hover.",
+      "html": "<div class=\"ds-ledger\"><button class=\"ds-row\"><span class=\"ds-row__thumb\"></span><span class=\"ds-row__name\">Reafirma tu Belleza</span><span class=\"ds-row__cell\">Radiofrecuencia</span><span class=\"ds-row__cell\">40 min</span><span class=\"ds-row__num\">$350 MXN</span><svg class=\"ds-row__mark\" viewBox=\"0 0 24 24\"><path d=\"M5 12h14M12 5v14\"/></svg><i class=\"ds-row__fill\" aria-hidden=\"true\"></i></button></div>",
+      "css": ".ds-ledger { padding: 1rem 2rem; background-color: #f7f5ef; border-radius: 4px; } .ds-row { position: relative; isolation: isolate; overflow: hidden; display: grid; grid-template-columns: 4.25rem 1.3fr 1.4fr 0.7fr 0.8fr 1.5rem; align-items: center; gap: 1.25rem; width: 100%; padding: 0.7rem 0.25rem; border: 0; border-top: 1px dashed rgba(94, 98, 72, 0.4); background: none; color: #282a24; text-align: left; font-family: Manrope, Arial, sans-serif; font-size: 0.95rem; cursor: pointer; } .ds-row__thumb { width: 4.25rem; height: 3.5rem; border-radius: 2px; background: #c5c8ae; } .ds-row__name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.5rem; font-weight: 500; line-height: 1.05; color: #343a2b; } .ds-row__cell { color: #55584e; } .ds-row__num { font-weight: 600; font-variant-numeric: tabular-nums; } .ds-row__mark { width: 1.5rem; height: 1.5rem; fill: none; stroke: #5e6248; stroke-width: 1.5; stroke-linecap: round; } .ds-row__fill { position: absolute; inset: -1px; z-index: -1; background: rgba(197, 200, 174, 0.5); clip-path: circle(0 at 50% 100%); transition: clip-path 0.75s cubic-bezier(0.22, 1, 0.36, 1); } .ds-row:hover .ds-row__fill, .ds-row:focus-visible .ds-row__fill { clip-path: circle(145% at 50% 100%); } .ds-row:focus-visible { outline: 2px solid #343a2b; outline-offset: -3px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Booking form field on paper with olive stroke and 6px corners.",
+      "html": "<label class=\"ds-field\"><span>Nombre</span><input type=\"text\" placeholder=\"Tu nombre\"></label>",
+      "css": ".ds-field { display: grid; gap: 0.4rem; font-family: Manrope, Arial, sans-serif; } .ds-field span { font-size: 0.95rem; font-weight: 600; color: #282a24; } .ds-field input { width: 100%; min-height: 3.25rem; padding: 0.8rem 1rem; border: 1px solid #6b6f55; border-radius: 6px; background: #fbfaf6; color: #282a24; font: inherit; font-size: 1rem; caret-color: #5e6248; } .ds-field input:focus-visible { outline: 2px solid #343a2b; outline-offset: 2px; border-color: #343a2b; }"
+    },
+    {
+      "name": "Header Navigation",
+      "kind": "nav",
+      "description": "Linen links on the olive table with a dashed underline that draws from the left; light pill CTA.",
+      "html": "<nav class=\"ds-nav\"><span class=\"ds-nav__tag\">Naturelle Spa</span><a href=\"#\">Tratamientos</a><a href=\"#\">Tecnología</a><a href=\"#\">Preguntas</a><a class=\"ds-nav__cta\" href=\"#\">Pedir cita</a></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; gap: 2rem; padding: 0.85rem 2rem; background: #5e6248; color: #f7f5ef; font-family: Manrope, Arial, sans-serif; font-size: 0.95rem; font-weight: 500; } .ds-nav__tag { margin-right: auto; padding: 0.5rem 0.8rem; background: #f7f5ef; color: #343a2b; border-radius: 3px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.1rem; outline: 1px dashed rgba(94, 98, 72, 0.4); outline-offset: -4px; box-shadow: 0 0.9rem 1.2rem -0.9rem rgba(20, 22, 16, 0.7); } .ds-nav a { position: relative; padding: 0.6rem 0; color: inherit; text-decoration: none; } .ds-nav a:not(.ds-nav__cta)::after { content: \"\"; position: absolute; left: 0; right: 0; bottom: 0.25rem; border-bottom: 1.5px dashed currentColor; transform: scaleX(0); transform-origin: left; transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1); } .ds-nav a:hover::after, .ds-nav a:focus-visible::after { transform: scaleX(1); } .ds-nav a:focus-visible { outline: 2px solid #f7f5ef; outline-offset: 3px; } .ds-nav .ds-nav__cta { padding: 0.55rem 1.2rem; min-height: 2.75rem; display: inline-flex; align-items: center; border-radius: 999px; background: #f7f5ef; color: #343a2b; font-weight: 600; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Lino plegado",
+    "overview": "The page is one long length of ivory linen laid and folded over a deep olive table, like a cabin towel. The olive field is the ground everything sits on; every content block is a linen panel with a fine woven texture, and the panels are hinged to each other at visible creases. Scroll opens the folds in 3D: panels swing down from their top hinge, the treatment ledger rows unfold one by one, the facial \"napkin\" opens from its centre crease, the protocol pleats like an accordion and the image gallery is a rolled bolt of linen (a 3D cylinder) that turns with scroll, arrows, keys and drag.\n\nThe material vocabulary is textile and nothing else: weave texture, dashed stitch lines, fold shadows that fall below a hanging edge, reverse (verso) faces that are a shade darker and shaded from the crease, hanging fabric tags with an eyelet, and woven labels with a dog-eared corner sewn along a seam. Typography is a quiet high-contrast serif (Cormorant Garamond) in charcoal for anything that is a name or a promise, and a clean grotesque (Manrope) for data, prices and instructions. Density is calm on the cloth, generous on the table.\n\nEverything is flat and fully visible by default. Motion is the protagonist when allowed, but it is layered on by JS inside `prefers-reduced-motion: no-preference`; with reduced motion or no JS the cloth lies flat and every word is readable.",
+    "keyCharacteristics": [
+      "Olive table ground (full-bleed) with linen panels capped at the cloth width.",
+      "Fine weave texture on every linen surface; dashed stitch rules instead of solid dividers.",
+      "Folds, not cards: panels join at creases and hinge open on scroll.",
+      "Serif names and promises, sans data; prices always tabular.",
+      "One interaction signature: the dye fill that floods a pill or tag from the pointer's entry point."
+    ],
+    "rules": [
+      { "name": "The Two Grounds Rule", "body": "Text lives either on linen (charcoal family) or on the olive table (linen / on-table ivory). Never place charcoal text on olive or olive-table text on olive-dark.", "section": "colors" },
+      { "name": "The Dye, Not Paint Rule", "body": "Interactive colour change is a fill that floods from the pointer, using the component's own dye colour (sage or olive-dark). There is no separate \"accent\" hue.", "section": "colors" },
+      { "name": "The Serif Names, Sans Numbers Rule", "body": "Anything a person would say aloud as a name or promise is Cormorant; anything they would compare (price, minutes, sessions) is Manrope with tabular numerals.", "section": "typography" },
+      { "name": "The Headline Stands Alone Rule", "body": "Section headlines have no kicker, eyebrow or overline above them. The uppercase label role is reserved for table column heads and in-detail subheads.", "section": "typography" },
+      { "name": "The Hanging Edge Rule", "body": "A shadow exists only where cloth hangs or folds; it falls below the edge with negative spread. No all-around soft glow.", "section": "elevation" },
+      { "name": "The Flat Fallback Rule", "body": "No 3D transform, rotation or hidden state lives in CSS defaults. JS adds them inside `matchMedia(\"(prefers-reduced-motion: no-preference)\")`; without it the cloth is flat and visible.", "section": "elevation" }
+    ],
+    "dos": [
+      "**Do** put every content block on linen with the weave texture, at the cloth width, over the olive table.",
+      "**Do** separate rows and fold edges with dashed stitch lines (1 to 1.5px, olive at 0.3 to 0.6 alpha).",
+      "**Do** hinge new panels to existing ones (squared joining edge, optional crease strip) rather than floating them with a gap and an all-around shadow.",
+      "**Do** give every pill, round button and tag the dye fill from the pointer (`.btn__fill`, wired by `fill.js`) and make focus-visible show the full fill.",
+      "**Do** set prices and durations in Manrope 600 with tabular numerals.",
+      "**Do** keep all 3D and hidden states in JS behind `prefers-reduced-motion: no-preference`; CSS defaults stay flat and visible.",
+      "**Do** use `cubic-bezier(0.22, 1, 0.36, 1)` (`--ease-naturelle`) for every eased transition."
+    ],
+    "donts": [
+      "**Don't** use soft all-around card shadows or floating cards; shadows fall only below a hanging edge.",
+      "**Don't** place a kicker, eyebrow or overline above a headline.",
+      "**Don't** introduce an accent hue outside the brand palette, or recolour or redraw the official logo and mark.",
+      "**Don't** animate layout properties; only transform, opacity, filter and clip-path.",
+      "**Don't** make content depend on a fold being open; the flat state must carry every price and word.",
+      "**Don't** use emoji or glyph characters as icons; icons are inline 1.4 to 1.5-stroke line SVGs."
+    ]
+  }
+}

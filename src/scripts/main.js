@@ -6,9 +6,15 @@ import { initNavigation } from "./navigation.js";
 import { initDisclosures } from "./disclosure.js";
 import { initTreatmentDetails } from "./treatment-details.js";
 import { initMotion } from "./motion.js";
+import { initFill } from "./fill.js";
+import { initScroll, initAnchors, scrollToTarget, prewarmImages } from "./scroll.js";
 
 document.documentElement.classList.add("js");
-initNavigation();
+initFill();
+const lenis = initScroll();
+initNavigation({ onOpen: () => lenis?.stop(), onClose: () => lenis?.start() });
+initAnchors();
+prewarmImages();
 initGoalSelector();
 initDisclosures();
 initTreatmentDetails();
@@ -22,7 +28,7 @@ const messageOutput = document.querySelector("[data-message-output]");
 document.querySelectorAll("[data-prepare-treatment]").forEach((button) => {
   button.addEventListener("click", () => {
     if (treatmentSelect) treatmentSelect.value = button.dataset.prepareTreatment;
-    document.querySelector("#reservar")?.scrollIntoView({ behavior: "smooth" });
+    scrollToTarget(document.querySelector("#reservar"), { offset: -24 });
     treatmentSelect?.focus({ preventScroll: true });
   });
 });

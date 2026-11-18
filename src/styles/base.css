@@ -1,27 +1,36 @@
+html {
+  background: var(--color-brand-strong);
+  scrollbar-color: var(--color-brand) var(--color-brand-dark);
+  scrollbar-width: thin;
+  -webkit-text-size-adjust: 100%;
+}
+html::-webkit-scrollbar { width: 0.7rem; }
+html::-webkit-scrollbar-track { background: var(--color-brand-dark); }
+html::-webkit-scrollbar-thumb { background: var(--color-brand); border-radius: 999px; border: 2px solid var(--color-brand-dark); }
 body {
-  background: var(--color-bg);
-  color: var(--color-text);
+  background: var(--color-brand-strong);
+  color: var(--color-on-ground);
   font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.65;
   text-rendering: optimizeLegibility;
+  overflow-x: clip;
+  caret-color: var(--color-brand-strong);
 }
 body.menu-open { overflow: hidden; }
-h1, h2, h3 { font-family: var(--font-heading); font-weight: 500; line-height: 0.98; text-wrap: balance; }
-h1 { font-size: clamp(3.1rem, 7.5vw, 5.75rem); letter-spacing: -0.03em; }
-h2 { font-size: clamp(2.45rem, 5vw, 4rem); letter-spacing: -0.025em; }
-h3 { font-size: clamp(1.6rem, 3vw, 2.25rem); }
-p { max-width: 72ch; }
-em { font-weight: 400; }
+h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 500; line-height: 1; letter-spacing: -0.02em; text-wrap: balance; }
+h1 { font-size: clamp(2.5rem, 4.4vw, 4rem); letter-spacing: -0.025em; }
+h2 { font-size: clamp(2.3rem, 4.6vw, 3.9rem); }
+h3 { font-size: clamp(1.5rem, 2.6vw, 2rem); }
+em { font-weight: 400; font-style: italic; }
+p { max-width: 68ch; }
 a { text-underline-offset: 0.25em; }
 button, a, input, select, textarea, summary { -webkit-tap-highlight-color: transparent; }
-:focus-visible {
-  outline: 3px solid #f7f5ef;
-  outline-offset: 3px;
-  box-shadow: 0 0 0 6px #1c2018;
-}
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; border-radius: 2px; }
+.on-ground { --focus: #f7f5ef; }
 ::selection { background: var(--color-sage); color: var(--color-brand-dark); }
-.skip-link { position: fixed; z-index: 1000; left: 1rem; top: 1rem; padding: 0.8rem 1rem; background: var(--color-text); color: white; transform: translateY(-180%); }
-.skip-link:focus { transform: none; }
-.section-kicker { font-size: 0.76rem; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; }
-section[id] { scroll-margin-top: 5.25rem; }
+.skip-link { position: fixed; z-index: 1000; left: 1rem; top: 1rem; padding: 0.8rem 1.2rem; border-radius: 999px; background: var(--color-bg); color: var(--color-brand-dark); font-weight: 600; transform: translateY(-200%); }
+.skip-link:focus { transform: none; --focus: #343a2b; }
+section[id], div[id="contacto"] { scroll-margin-top: 5.5rem; }
+:is(.site-header, .hero, .roll, .technology, .protocol, .faq, .booking, .site-footer, .mobile-dialog) { --focus: #f7f5ef; }
+:is(.linen, .tag, .nap__right) { --focus: #343a2b; }

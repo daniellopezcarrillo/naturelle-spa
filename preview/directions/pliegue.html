@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Pliegue Miura · Naturelle Spa</title>
+<link rel="stylesheet" href="/node_modules/@fontsource/cormorant-garamond/500.css" />
+<link rel="stylesheet" href="/node_modules/@fontsource/cormorant-garamond/500-italic.css" />
+<link rel="stylesheet" href="/node_modules/@fontsource/manrope/400.css" />
+<link rel="stylesheet" href="/node_modules/@fontsource/manrope/600.css" />
+<style>
+  :root { --olive:#a3a17c; --deep:#5e6248; --dark:#343a2b; --ivory:#f7f5ef; --sand:#e3ddcf; --ink:#282a24; --sage:#c5c8ae; --ease:cubic-bezier(.22,1,.36,1); }
+  * { box-sizing:border-box; margin:0; }
+  body { background:var(--ivory); color:var(--ink); font-family:Manrope,sans-serif; overflow:hidden; height:100vh; }
+  header { position:absolute; inset:0 0 auto; display:flex; align-items:center; gap:3rem; padding:1.5rem 4vw; z-index:6; }
+  header img { height:52px; }
+  header nav { display:flex; gap:2rem; margin-left:auto; }
+  header nav a { color:var(--ink); text-decoration:none; font-size:.95rem; }
+  .pill { background:var(--dark); color:var(--ivory); padding:.8rem 1.4rem; border-radius:999px; text-decoration:none; font-weight:600; font-size:.95rem; }
+  .copy { position:absolute; left:4vw; top:20vh; width:min(36vw,560px); z-index:5; }
+  h1 { font-family:"Cormorant Garamond",serif; font-weight:500; font-size:clamp(2.8rem,4.8vw,4.9rem); line-height:1; letter-spacing:-.02em; color:var(--dark); text-wrap:balance; }
+  h1 em { color:var(--deep); }
+  .copy p { margin-top:1.4rem; font-size:1.1rem; line-height:1.6; color:#4b4d43; max-width:32ch; }
+  .copy .pill { display:inline-block; margin-top:1.8rem; }
+  /* the sheet: a parallelogram tessellation, mountain and valley cells tilted alternately */
+  .sheet { position:absolute; right:2vw; top:14vh; width:56vw; height:76vh; perspective:1600px; perspective-origin:30% 30%; }
+  .grid { position:absolute; inset:0; display:grid; grid-template-columns:repeat(4,1fr); grid-auto-rows:1fr; gap:0; transform:rotateX(20deg) rotateY(-16deg) rotateZ(-6deg); transform-style:preserve-3d; }
+  .cell { position:relative; background:#fbfaf6; border:1px solid rgba(94,98,72,.2); overflow:hidden; transform-style:preserve-3d; animation:deploy 1.8s var(--ease) both;
+    clip-path:polygon(12% 0, 100% 0, 88% 100%, 0 100%); }
+  .cell:nth-child(odd) { transform:rotateY(16deg) translateZ(14px); background:#efe9dc; }
+  .cell:nth-child(even) { transform:rotateY(-16deg); }
+  .cell:nth-child(4n+1), .cell:nth-child(4n+3) { animation-delay:.18s; }
+  .cell img { width:100%; height:100%; object-fit:cover; }
+  .cell.tag { display:flex; align-items:flex-end; padding:1rem 1.4rem; }
+  .cell.tag b { font-family:"Cormorant Garamond",serif; font-weight:500; font-size:1.3rem; line-height:1.05; color:var(--dark); }
+  .cell.olive { background:var(--deep); } .cell.olive b { color:var(--ivory); }
+  .cell.sage { background:var(--sage); }
+  @keyframes deploy { from { transform:rotateY(85deg); opacity:0; } }
+  .motto { position:absolute; left:4vw; bottom:5vh; font-family:"Cormorant Garamond",serif; font-style:italic; font-size:1.25rem; color:var(--deep); }
+  @media (prefers-reduced-motion: reduce) { .cell { animation:none; } }
+</style>
+</head>
+<body>
+  <header>
+    <img src="/images/brand/naturelle-spa-logo-official.png" alt="Naturelle Spa" />
+    <nav><a href="#">Tratamientos</a><a href="#">Experiencia</a><a href="#">Tecnología</a><a href="#">Preguntas</a></nav>
+    <a class="pill" href="#">Pedir cita</a>
+  </header>
+  <div class="copy">
+    <h1>Tu belleza no necesita transformarse. <em>Necesita ser revelada.</em></h1>
+    <p>Tratamientos faciales y corporales donde la tecnología estética se une con el cuidado natural.</p>
+    <a class="pill" href="#">Pedir cita por WhatsApp</a>
+  </div>
+  <div class="sheet"><div class="grid">
+    <div class="cell"><img src="/images/generated/gallery/treatments/reafirma-tu-belleza-radiofrecuencia.webp" alt="" /></div>
+    <div class="cell tag"><b>Reafirma tu Belleza</b></div>
+    <div class="cell"><img src="/images/generated/gallery/facial/facial-cooling-care.webp" alt="" /></div>
+    <div class="cell tag olive"><b>Juventud Radiante</b></div>
+    <div class="cell tag sage"><b>Cintura de Ensueño</b></div>
+    <div class="cell"><img src="/images/generated/gallery/treatments/cintura-de-ensueno-cavitacion-40k.webp" alt="" /></div>
+    <div class="cell tag"><b>Curvas Definidas</b></div>
+    <div class="cell"><img src="/images/generated/gallery/treatments/curvas-definidas-vacuunterapia.webp" alt="" /></div>
+    <div class="cell"><img src="/images/generated/hero-botanical-still-life.webp" alt="" /></div>
+    <div class="cell tag olive"><b>Cuerpo Esculpido</b></div>
+    <div class="cell"><img src="/images/generated/gallery/body/body-maderotherapy-still-life.webp" alt="" /></div>
+    <div class="cell tag"><b>Figura en Equilibrio</b></div>
+  </div></div>
+  <p class="motto" lang="fr">Où la technologie et la nature s’unissent</p>
+</body>
+</html>

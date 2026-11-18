@@ -3,31 +3,25 @@
   --color-brand-strong: #5e6248;
   --color-brand-dark: #343a2b;
   --color-bg: #f7f5ef;
+  --color-linen: #f7f5ef;
+  --color-linen-verso: #efeadf;
   --color-bg-alt: #e3ddcf;
-  --color-surface: #fff;
   --color-text: #282a24;
-  --color-text-muted: #61645b;
+  --color-text-muted: #55584e;
+  --color-on-ground: #ecebdf;
   --color-sage: #c5c8ae;
-  --color-border: rgba(94, 98, 72, 0.22);
+  --color-border: rgba(94, 98, 72, 0.4);
+  --focus: #343a2b;
   --font-heading: "Cormorant Garamond", Georgia, serif;
   --font-body: "Manrope", Arial, sans-serif;
-  --space-1: 0.5rem;
-  --space-2: 1rem;
-  --space-3: 1.5rem;
-  --space-4: 2rem;
-  --space-5: 3rem;
-  --space-6: 4.5rem;
-  --space-7: 7rem;
-  --container-copy: 42rem;
-  --container-content: 72rem;
-  --container-wide: 80rem;
   --gutter: clamp(1rem, 4vw, 3rem);
-  --section-space: clamp(4.5rem, 10vw, 9rem);
-  --radius-sm: 0;
-  --radius-md: 0.75rem;
-  --radius-lg: 1.5rem;
+  --section-space: clamp(4rem, 9vw, 8rem);
+  --cloth-width: min(100%, 76rem);
+  --weave:
+    repeating-linear-gradient(0deg, rgba(94, 98, 72, 0.07) 0 1px, transparent 1px 3px),
+    repeating-linear-gradient(90deg, rgba(94, 98, 72, 0.06) 0 1px, transparent 1px 4px);
+  --fold-shadow: 0 2.5rem 3.75rem -2.5rem rgba(20, 22, 16, 0.65);
   --motion-fast: 180ms;
   --motion-normal: 320ms;
-  --motion-slow: 650ms;
   --ease-naturelle: cubic-bezier(0.22, 1, 0.36, 1);
 }

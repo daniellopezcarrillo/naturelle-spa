@@ -7,6 +7,9 @@ export const publicTreatments = [
       "Brazos",
       "Firmeza y textura"
     ],
+    "goals": [
+      "reafirmar"
+    ],
     "type": "body"
   },
   {
@@ -15,6 +18,9 @@ export const publicTreatments = [
     "zones": [
       "Abdomen"
     ],
+    "goals": [
+      "reducir"
+    ],
     "type": "body"
   },
   {
@@ -22,6 +28,10 @@ export const publicTreatments = [
     "name": "Curvas Definidas",
     "zones": [
       "Piernas"
+    ],
+    "goals": [
+      "moldear",
+      "mejorar-textura"
     ],
     "type": "body"
   },
@@ -32,6 +42,10 @@ export const publicTreatments = [
       "Silueta completa",
       "Firmeza y textura"
     ],
+    "goals": [
+      "reducir",
+      "reafirmar"
+    ],
     "type": "body"
   },
   {
@@ -40,6 +54,10 @@ export const publicTreatments = [
     "zones": [
       "Brazos",
       "Firmeza y textura"
+    ],
+    "goals": [
+      "reafirmar",
+      "mejorar-textura"
     ],
     "type": "body"
   },
@@ -50,6 +68,9 @@ export const publicTreatments = [
       "Piernas",
       "Firmeza y textura"
     ],
+    "goals": [
+      "mejorar-textura"
+    ],
     "type": "body"
   },
   {
@@ -57,6 +78,9 @@ export const publicTreatments = [
     "name": "Figura en Equilibrio",
     "zones": [
       "Abdomen"
+    ],
+    "goals": [
+      "reducir"
     ],
     "type": "body"
   },
@@ -67,6 +91,10 @@ export const publicTreatments = [
       "Abdomen",
       "Silueta completa"
     ],
+    "goals": [
+      "reducir",
+      "reafirmar"
+    ],
     "type": "body"
   },
   {
@@ -74,6 +102,9 @@ export const publicTreatments = [
     "name": "Cuerpo Esculpido",
     "zones": [
       "Abdomen"
+    ],
+    "goals": [
+      "moldear"
     ],
     "type": "body"
   },
@@ -84,6 +115,11 @@ export const publicTreatments = [
       "Abdomen",
       "Silueta completa"
     ],
+    "goals": [
+      "reducir",
+      "moldear",
+      "reafirmar"
+    ],
     "type": "body"
   },
   {
@@ -92,6 +128,9 @@ export const publicTreatments = [
     "zones": [
       "Rostro"
     ],
+    "goals": [
+      "rostro"
+    ],
     "type": "facial"
   }
 ];
@@ -99,4 +138,9 @@ export const publicTreatments = [
 export function getPublicTreatmentsByZone(zone) {
   if (!zone) return publicTreatments;
   return publicTreatments.filter((treatment) => treatment.zones.includes(zone));
+}
+
+export function getPublicTreatmentsByGoal(goal) {
+  if (!goal) return publicTreatments;
+  return publicTreatments.filter((treatment) => treatment.goals.includes(goal));
 }

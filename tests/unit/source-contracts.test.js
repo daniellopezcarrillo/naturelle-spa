@@ -11,29 +11,45 @@ test("navigation falls back safely without IntersectionObserver", () => {
   assert.deepEqual(added, ["is-compact"]);
 });
 
-test("the trust strip contains exactly three documented facts", async () => {
+test("the hero keeps exactly three documented principles and no kicker labels", async () => {
   const source = await readFile("src/index.template.html", "utf8");
-  const strip = source.match(/<section class="trust-strip"[\s\S]*?<\/section>/)?.[0] ?? "";
-  assert.equal((strip.match(/<p>/g) ?? []).length, 3);
-  assert.doesNotMatch(strip, /Consulta directa/);
+  const list = source.match(/<ul class="principles"[\s\S]*?<\/ul>/)?.[0] ?? "";
+  assert.equal((list.match(/<li>/g) ?? []).length, 3);
+  assert.doesNotMatch(list, /Consulta directa/);
+  assert.doesNotMatch(source, /section-kicker/);
 });
 
-test("focus, field borders, and header transitions preserve the quality contract", async () => {
+test("focus, selection, scrollbar and field borders come from the palette", async () => {
   const base = await readFile("src/styles/base.css", "utf8");
   const sections = await readFile("src/styles/sections.css", "utf8");
-  assert.match(base, /outline:\s*3px solid #f7f5ef/);
-  assert.match(base, /box-shadow:\s*0 0 0 6px #1c2018/);
-  assert.match(sections, /border:\s*1px solid #dfe2d2/);
+  assert.match(base, /:focus-visible \{[^}]*outline: 2px solid var\(--focus\)/);
+  assert.match(base, /::selection/);
+  assert.match(base, /scrollbar-color/);
+  assert.match(sections, /border: 1px solid #6b6f55/);
   assert.doesNotMatch(sections, /transition:\s*height/);
+});
+
+test("buttons share one dye-fill component with pointer tracking", async () => {
+  const components = await readFile("src/styles/components.css", "utf8");
+  const fill = await readFile("src/scripts/fill.js", "utf8");
+  assert.match(components, /\.btn__fill \{[^}]*clip-path: circle\(0 at var\(--x\) var\(--y\)\)/s);
+  assert.match(components, /border-radius: 999px/);
+  assert.match(components, /\.btn--round/);
+  assert.match(components, /prefers-reduced-motion: reduce/);
+  assert.match(fill, /--x/);
+  assert.match(fill, /pointerover/);
 });
 
 test("official brand and gallery assets preserve accessible descriptions", async () => {
   const source = await readFile("src/index.template.html", "utf8");
-  assert.equal((source.match(/naturelle-spa-logo-official\.png/g) ?? []).length, 2);
-  assert.equal((source.match(/naturelle-spa-mark\.png/g) ?? []).length, 2);
-  assert.equal((source.match(/<strong>Imagen ilustrativa<\/strong>/g) ?? []).length, 0);
+  // Header, mobile menu and footer draw the official silhouette through its own alpha (no box), with the name beside it in the header.
+  assert.equal((source.match(/class="brand-mark/g) ?? []).length, 3);
+  assert.match(source, /<span class="wordmark__name">Naturelle Spa<\/span>/);
+  const components = await readFile("src/styles/components.css", "utf8");
+  assert.match(components, /mask: url\("\/images\/brand\/naturelle-spa-silhouette\.png"\)/);
+  // The development direction contract never ships in page source.
+  assert.doesNotMatch(source, /THESIS:|OWN-WORLD:/);
   assert.match(source, /facial-juventud-radiante-illustrative\.avif/);
-  assert.doesNotMatch(source, /facial-feature__caption">Imagen ilustrativa/);
   assert.match(source, /alt="Imagen ilustrativa de una mujer en un espacio de spa."/);
   assert.match(source, /<!-- MAP_URL -->/);
   assert.match(source, /<!-- WHATSAPP_URL -->/);
@@ -55,32 +71,26 @@ test("all approved treatments map to generated assets with grounded alt text", a
   }
 });
 
-test("the catalog is image-led and retains no-JS treatment content", async () => {
+test("the ledger and roll are generated from the catalog with lazy images", async () => {
   const source = await readFile("src/index.template.html", "utf8");
   const generator = await readFile("scripts/generate.mjs", "utf8");
-  assert.match(generator, /treatments\.map\(renderTreatment\)/);
-  assert.match(generator, /loading=\\?"lazy\\?" decoding=\\?"async\\?"/);
-  assert.match(source, /<!-- BODY_TREATMENTS -->/);
-  assert.doesNotMatch(source, /treatment-entry/);
+  assert.match(generator, /treatments\.map\(renderLedgerRow\)/);
+  assert.match(generator, /loading="lazy" decoding="async"/);
+  assert.match(generator, /data-goals=/);
+  assert.match(source, /<!-- TREATMENT_LEDGER -->/);
+  assert.match(source, /<!-- ROLL_ITEMS -->/);
+  assert.match(source, /aria-roledescription="carrusel"/);
 });
 
-test("treatment media stays compact and ratio-controlled across layouts", async () => {
+test("the linen roll and folds are motion-only enhancements with reduced-motion protection", async () => {
   const sections = await readFile("src/styles/sections.css", "utf8");
-  assert.match(sections, /\.treatment-story__media \{[^}]*width: min\(100%, clamp\(17\.5rem, 28vw, 21rem\)\)/s);
-  assert.match(sections, /\.treatment-story__media picture \{[^}]*aspect-ratio: 4 \/ 5/s);
-  assert.match(sections, /\.treatment-story__media img \{[^}]*height: 100%/s);
-  assert.match(sections, /\.treatment-story__media, \.treatment-story:nth-child\(even\) \.treatment-story__media \{[^}]*width: min\(100%, clamp\(15rem, 76vw, 18\.75rem\)\)/s);
-});
-
-test("treatment media uses deterministic organic shapes with reduced-motion protection", async () => {
-  const generator = await readFile("scripts/generate.mjs", "utf8");
-  const sections = await readFile("src/styles/sections.css", "utf8");
-  assert.match(generator, /\["lens", "arch", "botanical"\]/);
-  assert.match(generator, /data-media-shape=/);
-  assert.match(sections, /data-media-shape="arch"/);
-  assert.match(sections, /data-media-shape="botanical"/);
-  assert.match(sections, /prefers-reduced-motion: reduce/);
-  assert.match(sections, /\.treatment-story__media picture,[\s\S]*?transition: none;[\s\S]*?transform: none;/);
+  const motion = await readFile("src/scripts/motion.js", "utf8");
+  const scroll = await readFile("src/scripts/scroll.js", "utf8");
+  assert.match(sections, /\.roll--3d \.roll__item \{[^}]*backface-visibility: hidden/s);
+  assert.match(motion, /prefers-reduced-motion: no-preference/);
+  assert.match(motion, /gsap\.matchMedia\(\)/);
+  assert.match(scroll, /new Lenis\(\{ lerp: 0\.1 \}\)/);
+  assert.match(scroll, /if \(prefersReducedMotion\(\)\) return null/);
 });
 
 test("the document loads its visual system without JavaScript", async () => {
@@ -91,4 +101,5 @@ test("the document loads its visual system without JavaScript", async () => {
   assert.doesNotMatch(mainScript, /\.css["']/);
   assert.match(mainStyles, /@fontsource\/cormorant-garamond/);
   assert.match(mainStyles, /@fontsource\/manrope/);
+  assert.match(mainStyles, /lenis\/dist\/lenis\.css/);
 });
