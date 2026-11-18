@@ -8,3 +8,11 @@ dist
 .impeccable/questions/
 .impeccable/mocks/
 .impeccable/hook.cache.json
+
+# Local tooling and scratch files that are not part of the site
+vps-connector/
+.playwright-mcp/
+gpt-image-skills/
+.atl/
+.qa-iteration-desktop.png
+review-*.png
